@@ -34,7 +34,7 @@ public class ProblemSet0 {
             if (i == list.size() - 1) {
                 return list;
             }
-            String clumped = ("(" + list.get(i) + list.get(i + 1) + ")");
+            String clumped = ("(" + list.get(i) + " " + list.get(i + 1) + ")");
             list.set(i, clumped);
             list.remove(i + 1);
         }
