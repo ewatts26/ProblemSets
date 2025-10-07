@@ -16,7 +16,7 @@ public class ProblemSet0 {
 
         // test for median
         int[] arr4 = {2, 3, 10, 1, 5};
-        System.out.println(Arrays.toString(arr4));
+        System.out.println(median(arr4));
     }
     
     public static int countInRange(int[] arr, int min, int max) {
@@ -74,14 +74,14 @@ public class ProblemSet0 {
     }
     public static int median(int[] arr) {
         int length = arr.length / 2;
-        int count = 0;
+        int[] count = new int[arr.length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
-                    count++;
+                    count[i]++;
                 }
             }
-            if (count == length) {
+            if (count[i] == length) {
                 return arr[i];
             }
         }
